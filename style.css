@@ -46,7 +46,7 @@ h2 {
   grid-template-columns: repeat(1, 1fr);
   transition: all 0.3s ease-in-out;
 }
-.container > div {
+.card {
   width: 100%;
   text-align: center;
   padding: 25px;
@@ -58,7 +58,7 @@ h2 {
   text-align: start;
   gap: 15px;
 }
-.container > div > p {
+.container > .card > p {
   line-height: 1.5;
 }
 .sedans {
@@ -103,7 +103,7 @@ button {
   background-color: hsl(0, 0%, 100%);
   color: var(--very-dark-cyan);
 }
-.container > div button {
+.container > .card button {
   margin-top: auto;
 }
 @media (min-width: 768px) {
@@ -112,7 +112,7 @@ button {
     height: 600px;
     grid-template-columns: repeat(3, 1fr);
   }
-  .container > div {
+  .card {
     padding: 25px;
     font-size: 18px;
     display: grid;
