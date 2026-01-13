@@ -1,0 +1,136 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Lexend Deca", sans-serif;
+}
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 30px;
+}
+.img-container {
+  width: 20%;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  transition: all 0.3s ease-in-out;
+}
+.container > div {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+  gap: 15px;
+}
+.container > div > p {
+  line-height: 1.5;
+}
+.sedans {
+  background-color: var(--bright-orange);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+.suvs {
+  background-color: var(--dark-cyan);
+  color: white;
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  place-self: start;
+}
+.sedans button {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--bright-orange);
+}
+.suvs button {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--dark-cyan);
+}
+.luxury button {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--very-dark-cyan);
+}
+.container > div button {
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container > div {
+    padding: 25px;
+    font-size: 18px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 40px;
+  }
+  .img-container {
+    margin-top: 50px;
+    width: 40%;
+  }
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
